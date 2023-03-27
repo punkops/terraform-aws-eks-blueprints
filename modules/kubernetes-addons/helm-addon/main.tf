@@ -57,6 +57,11 @@ resource "helm_release" "addon" {
       type  = try(each_item.value.type, null)
     }
   }
+
+  lifecycle {
+    ignore_changes = var.ignore_changes
+  }
+
   depends_on = [module.irsa]
 }
 
