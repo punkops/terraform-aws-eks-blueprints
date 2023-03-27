@@ -59,7 +59,9 @@ resource "helm_release" "addon" {
   }
 
   lifecycle {
-    ignore_changes = var.ignore_changes
+    ignore_changes = [
+      repository_password
+    ]
   }
 
   depends_on = [module.irsa]
