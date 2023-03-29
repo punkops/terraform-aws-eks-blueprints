@@ -5,7 +5,6 @@ module "helm_addon" {
   set_values        = local.set_values
   irsa_config       = local.irsa_config
   addon_context     = var.addon_context
-  ignore_changes    = var.ignore_changes
 }
 
 resource "aws_iam_policy" "karpenter" {

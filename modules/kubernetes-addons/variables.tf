@@ -893,12 +893,6 @@ variable "karpenter_helm_config" {
   default     = {}
 }
 
-variable "karpenter_ignore_changes" {
-  description = "List of karpenter helm chart values to ignore changes for"
-  type        = list(string)
-  default     = []
-}
-
 variable "karpenter_irsa_policies" {
   description = "Additional IAM policies for a IAM role for service accounts"
   type        = list(string)

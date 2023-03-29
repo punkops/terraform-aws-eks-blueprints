@@ -79,9 +79,3 @@ variable "rule_name_prefix" {
     error_message = "Maximum input length exceeded. Please enter no more than 14 characters."
   }
 }
-
-variable "ignore_changes" {
-  description = "List of paths to ignore changes for"
-  type        = list(string)
-  default     = []
-}

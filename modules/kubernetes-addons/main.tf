@@ -318,7 +318,6 @@ module "karpenter" {
   count = var.enable_karpenter ? 1 : 0
 
   helm_config                                 = var.karpenter_helm_config
-  ignore_changes                              = var.karpenter_ignore_changes
   irsa_policies                               = var.karpenter_irsa_policies
   node_iam_instance_profile                   = var.karpenter_node_iam_instance_profile
   enable_spot_termination                     = var.karpenter_enable_spot_termination_handling

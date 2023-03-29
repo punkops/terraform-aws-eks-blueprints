@@ -37,9 +37,3 @@ variable "addon_context" {
   description = "Input configuration for the addon"
   type        = any
 }
-
-variable "ignore_changes" {
-  description = "List of paths to ignore changes for"
-  type        = list(string)
-  default     = []
-}
